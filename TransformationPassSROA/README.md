@@ -1,0 +1,4 @@
+## A Transformation Pass for LLVM Infrastracture: SROA
+In this directory, I implement a Scalar Replacement of Aggregates (SROA) pass, which operates on a single function at a time. The goal of this pass is to replace small, fixed-size aggregate objects (e.g., structures or small constant-size arrays) with separate variables corresponding to the fields of the original object. The primary benefit of this pass is that it allows global dataflow optimizations to be applied to fields of aggregate objects.
+
+The source code is in the file `ScalarReplAggregates.cpp`. You need to have specific knowledge about the LLVM infrastracture in order to use my code. I also provide several tests and a Makefile in the `tests` folder.
